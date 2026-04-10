@@ -1,7 +1,7 @@
 local options = {
 	number = true, -- line numbers
 	relativenumber = true, -- relative line numbers
-	hlsearch = false, -- highlight previous search
+	hlsearch = true, -- highlight previous search
 	termguicolors = true, -- allow terminal colors
 	cursorline = true, -- cursor line
 	splitbelow = true, -- make any new vertical split be below
@@ -11,7 +11,7 @@ local options = {
 	softtabstop = 4, --]
 	shiftwidth = 4, --]
 	expandtab = true, -- make tabs expand into spaces
-	clipboard = "unnamedplus", -- share the system clip board
+	-- clipboard = "unnamedplus", -- share the system clip board
 	scrolloff = 5, -- force to scroll n amount of lines before cursor reaches the bottom or top of window
 	sidescrolloff = 20, -- force to scroll n amount of lines before cursor reaches the right or left of the window
 	virtualedit = "block", -- makes visual block mode 'better'
@@ -24,6 +24,7 @@ local options = {
 	list = true, -- whether to display
 	listchars = { tab = "» ", trail = "·", nbsp = "·" }, -- chars to display for tabs,
 	confirm = true, -- asks if you wans to save files
+    smartindent = true,
 }
 
 for k, v in pairs(options) do
