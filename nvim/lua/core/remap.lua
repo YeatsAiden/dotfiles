@@ -3,7 +3,6 @@ vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>", { desc = "Open File Explorer" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -29,8 +28,8 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Tabs
-vim.keymap.set("n", "<S-h>", "<cmd>tabn<CR>", { desc = "Next Tab" })
-vim.keymap.set("n", "<S-l>", "<cmd>tabp<CR>", { desc = "Previous Tab" })
+vim.keymap.set("n", "<S-h>", "<cmd>tabp<CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<S-l>", "<cmd>tabn<CR>", { desc = "Previous Tab" })
 vim.keymap.set("n", "<C-S-l>", "<cmd>tabm+<CR>", { desc = "Move Tab Right" })
 vim.keymap.set("n", "<C-S-h>", "<cmd>tabm-<CR>", { desc = "Move Tab Left" })
 vim.keymap.set("n", "<C-w>t", "<cmd>$tabnew<CR>", { desc = "New Tab" })
