@@ -1,9 +1,11 @@
 [font]
 
-normal.family = "Hack Nerd Font"
-bold.family = "Hack Nerd Font"
-italic.family = "Hack Nerd Font"
-bold_italic.family = "Hack Nerd Font"
+normal.family = "Hack"
+bold.family = "Hack"
+italic.family = "Hack"
+bold_italic.family = "Hack"
+
+size = 10
 
 # Colors (Gruvbox dark)
 
