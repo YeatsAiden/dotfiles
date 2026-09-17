@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec_always --no-startup-id /usr/bin/dunst
-exec_always --no-startup-id feh --bg-fill -z ~/Wallpapers/*
+exec_always --no-startup-id feh --bg-fill -z ~/aseprite/wallpapers/*.png
 # exec_always --no-startup-id wal -i ~/Wallpapers/$(ls ~/Wallpapers/ | shuf -n 1)
 exec_always --no-startup-id picom
 
@@ -63,6 +63,13 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+bindsym $mod+Mod1+p exec playerctl play-pause
+bindsym $mod+Mod1+l exec playerctl next
+bindsym $mod+Mod1+h exec playerctl previous
+bindsym $mod+Mod1+k exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume && dunstify -r 5556 -h int:value:$(pactl list sinks | grep 'Volume:' | head -n 1 | tr -d ' %' | cut -d '/' -f 2) "Volume: $(pactl list sinks | grep 'Volume:' | head -n 1 | tr -d ' %' | cut -d '/' -f 2)"
+bindsym $mod+Mod1+j exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume && dunstify -r 5556 -h int:value:$(pactl list sinks | grep 'Volume:' | head -n 1 | tr -d ' %' | cut -d '/' -f 2) "Volume: $(pactl list sinks | grep 'Volume:' | head -n 1 | tr -d ' %' | cut -d '/' -f 2)"
+bindsym $mod+Mod1+m exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

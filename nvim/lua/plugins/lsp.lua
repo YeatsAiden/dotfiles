@@ -74,7 +74,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --  See `:help lsp-config` for information about keys and how to configure
 ---@type table<string, vim.lsp.Config>
 local servers = {
-    clangd = {},
+    clangd = {
+        cmd = {'clangd', '--enable-config'},
+        root_markers = { '.clangd', 'compile_commands.json' },
+        filetypes = {"cpp", "c"}
+    },
+    codelldb = {},
+    kotlin_language_server = {},
     -- gopls = {},
     pyright = {},
     -- rust_analyzer = {},
@@ -86,6 +92,7 @@ local servers = {
     -- ts_ls = {},
 
     stylua = {}, -- Used to format Lua code
+    tinymist = {}, -- Used to format Lua code
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
