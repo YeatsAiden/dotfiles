@@ -32,10 +32,3 @@ vim.api.nvim_create_autocmd('PackChanged', {
         end
     end,
 })
-
--- vim.pack.add({
---     -- Auto pairs
---     { src = gh "altermo/ultimate-autopair.nvim" },
---     { src = gh "folke/todo-comments.nvim" },
---     { src = gh "chomosuke/typst-preview.nvim" },
--- )
