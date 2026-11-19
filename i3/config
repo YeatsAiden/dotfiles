@@ -44,6 +44,7 @@ tiling_drag modifier titlebar
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+o exec $HOME/dotfiles/i3/open_document.sh
+bindsym $mod+Shift+d exec $HOME/dotfiles/i3/toggle_hdmi_output.sh
 
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun
